@@ -10,3 +10,5 @@ Thumbs.db
 # Local env
 .env
 .env.*
+
+.git_local/
