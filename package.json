@@ -1,0 +1,12 @@
+{
+  "name": "bridgii-site",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Static BRIDGII site server for Render",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
