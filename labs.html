@@ -1,0 +1,73 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BRIDGII | Virtual Labs</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>tailwind.config={theme:{extend:{colors:{brandSky:'#8A1538',brandDeep:'#0A1F2E',brandMint:'#F3E6EC'},boxShadow:{soft:'0 24px 60px -32px rgba(10, 31, 46, 0.25)'}}}};</script>
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+</head>
+<body class="bg-slate-50 text-slate-800">
+  <div class="global-watermark" aria-hidden="true">BRIDGII</div>
+  <div class="floating-bg" aria-hidden="true"><span class="blob blob-a"></span><span class="blob blob-b"></span><span class="blob blob-c"></span><span class="ring ring-a"></span><span class="ring ring-b"></span></div>
+  <div class="relative z-10">
+    <header class="sticky top-0 z-50 border-b border-white/60 bg-white/75 backdrop-blur-xl">
+      <nav class="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 sm:px-6 lg:px-8">
+        <a href="index.html" class="flex items-center gap-3 text-brandDeep"><img src="assets/images/logo.png" alt="BRIDGII logo" class="brand-logo" /></a>
+        <button id="menuBtn" class="inline-flex rounded-lg border border-[#d8a8b8] p-2 text-[#8A1538] lg:hidden" aria-label="Toggle menu" aria-expanded="false"><svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg></button>
+        <ul class="hidden items-center gap-7 text-sm font-semibold text-slate-700 lg:flex"><li><a href="index.html" class="nav-link">Home</a></li><li><a href="about.html" class="nav-link">About Us</a></li><li><a href="services.html" class="nav-link active">Services</a></li><li><a href="team.html" class="nav-link">Team</a></li><li><a href="contact.html" class="nav-link">Contact</a></li></ul>
+        <div class="hidden items-center gap-3 lg:flex"><a href="login.html" class="rounded-lg border border-[#d8a8b8] px-4 py-2 text-sm font-semibold text-[#8A1538] transition hover:bg-[#f8eef2]">Login</a><a href="register.html" class="rounded-lg bg-gradient-to-r from-[#8A1538] to-[#B33C63] px-4 py-2 text-sm font-semibold text-white transition hover:-translate-y-0.5">Register</a></div>
+      </nav>
+      <div id="mobileMenu" class="hidden border-t border-slate-200 bg-white lg:hidden"><ul class="space-y-1 px-4 py-3 text-sm font-semibold"><li><a href="index.html" class="block rounded-md px-3 py-2 hover:bg-[#f8eef2]">Home</a></li><li><a href="about.html" class="block rounded-md px-3 py-2 hover:bg-[#f8eef2]">About Us</a></li><li><a href="services.html" class="block rounded-md px-3 py-2 hover:bg-[#f8eef2]">Services</a></li><li><a href="team.html" class="block rounded-md px-3 py-2 hover:bg-[#f8eef2]">Team</a></li><li><a href="contact.html" class="block rounded-md px-3 py-2 hover:bg-[#f8eef2]">Contact</a></li><li><a href="login.html" class="block rounded-md px-3 py-2 hover:bg-[#f8eef2]">Login</a></li><li><a href="register.html" class="block rounded-md px-3 py-2 hover:bg-[#f8eef2]">Register</a></li></ul></div>
+    </header>
+
+    <main class="section-space mx-auto max-w-7xl px-4 pb-20 sm:px-6 lg:px-8">
+      <div class="rounded-3xl border border-white/80 bg-white/85 p-7 shadow-soft backdrop-blur sm:p-10" data-aos="fade-up">
+        <div class="flex flex-wrap items-center justify-between gap-3">
+          <div>
+            <h1 class="text-3xl font-black text-brandDeep sm:text-4xl">Virtual Labs</h1>
+            <p class="mt-2 text-slate-600">Explore interactive simulations by subject and open each in a full-screen virtual lab modal.</p>
+          </div>
+          <a href="services.html" class="open-btn">Back to Services</a>
+        </div>
+      </div>
+
+      <section class="mt-10">
+        <h2 class="text-2xl font-black text-brandDeep" data-aos="fade-up">Interactive Simulations</h2>
+        <div id="simsCategories" class="mt-4 flex flex-wrap gap-2" data-aos="zoom-in"></div>
+        <div id="simsHost" class="mt-4"></div>
+      </section>
+    </main>
+
+    <footer id="siteFooter"></footer>
+  </div>
+
+  <div id="embedModal" class="embed-modal" aria-hidden="true">
+    <div class="embed-modal-panel" role="dialog" aria-modal="true" aria-labelledby="embedModalTitle">
+      <div class="embed-modal-head">
+        <h3 id="embedModalTitle" class="text-sm font-bold text-brandDeep">Interactive Resource</h3>
+        <div class="flex items-center gap-2">
+          <a id="embedExternalLink" href="#" target="_blank" rel="noreferrer" class="open-btn">Open in New Tab</a>
+          <button id="embedCloseBtn" type="button" class="open-btn">Close</button>
+        </div>
+      </div>
+      <div class="embed-frame-wrap"><iframe id="embedFrame" src="" title="Interactive content" allow="autoplay; fullscreen; xr-spatial-tracking" allowfullscreen loading="lazy"></iframe></div>
+    </div>
+  </div>
+
+  <script src="assets/js/shared-footer.js"></script>
+  <script src="assets/js/script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="assets/js/auth-config.js"></script>
+  <script src="assets/js/nav-auth.js"></script>
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script src="assets/js/labs.js?v=20260309-1"></script>
+  <script>AOS.init({duration:700, once:true, offset:80});</script>
+</body>
+</html>
+
+
+
+

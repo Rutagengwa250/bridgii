@@ -1,0 +1,61 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BRIDGII | About Us</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>tailwind.config={theme:{extend:{colors:{brandSky:'#8A1538',brandDeep:'#0A1F2E',brandMint:'#F3E6EC'},boxShadow:{soft:'0 24px 60px -32px rgba(10, 31, 46, 0.25)'}}}};</script>
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body class="bg-slate-50 text-slate-800">
+  <div class="global-watermark" aria-hidden="true">BRIDGII</div>
+  <div class="floating-bg" aria-hidden="true"><span class="blob blob-a"></span><span class="blob blob-b"></span><span class="blob blob-c"></span><span class="ring ring-a"></span><span class="ring ring-b"></span></div>
+  <div class="relative z-10">
+    <header class="sticky top-0 z-50 border-b border-white/60 bg-white/75 backdrop-blur-xl">
+      <nav class="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 sm:px-6 lg:px-8">
+        <a href="index.html" class="flex items-center gap-3 text-brandDeep"><img src="assets/images/logo.png" alt="BRIDGII logo" class="brand-logo" /></a>
+        <button id="menuBtn" class="inline-flex rounded-lg border border-[#d8a8b8] p-2 text-[#8A1538] lg:hidden" aria-label="Toggle menu" aria-expanded="false"><svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg></button>
+        <ul class="hidden items-center gap-7 text-sm font-semibold text-slate-700 lg:flex">
+          <li><a href="index.html" class="nav-link">Home</a></li><li><a href="about.html" class="nav-link active">About Us</a></li><li><a href="services.html" class="nav-link">Services</a></li><li><a href="team.html" class="nav-link">Team</a></li><li><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+                <div class="hidden items-center gap-3 lg:flex">
+          <a href="login.html" class="rounded-lg border border-[#d8a8b8] px-4 py-2 text-sm font-semibold text-[#8A1538] transition hover:bg-[#f8eef2]">Login</a>
+          <a href="register.html" class="rounded-lg bg-gradient-to-r from-[#8A1538] to-[#B33C63] px-4 py-2 text-sm font-semibold text-white transition hover:-translate-y-0.5">Register</a>
+        </div>      </nav>
+      <div id="mobileMenu" class="hidden border-t border-slate-200 bg-white lg:hidden"><ul class="space-y-1 px-4 py-3 text-sm font-semibold"><li><a href="index.html" class="block rounded-md px-3 py-2 hover:bg-[#f8eef2]">Home</a></li><li><a href="about.html" class="block rounded-md px-3 py-2 hover:bg-[#f8eef2]">About Us</a></li><li><a href="services.html" class="block rounded-md px-3 py-2 hover:bg-[#f8eef2]">Services</a></li><li><a href="team.html" class="block rounded-md px-3 py-2 hover:bg-[#f8eef2]">Team</a></li><li><a href="contact.html" class="block rounded-md px-3 py-2 hover:bg-[#f8eef2]">Contact</a></li></ul></div>
+    </header>
+
+    <main class="section-space mx-auto max-w-7xl px-4 pb-20 sm:px-6 lg:px-8">
+      <div class="reveal rounded-3xl border border-white/80 bg-white/85 p-7 shadow-soft backdrop-blur sm:p-10">
+        <h1 class="text-3xl font-black text-brandDeep sm:text-4xl">About Us</h1>
+        <p class="mt-5 max-w-5xl leading-relaxed text-slate-700">We are BRIDGII. We bridge the gap in education systems through the provision of visualized learning materials including 3D models, simulations, virtual labs, and AI-driven video content aligned with the Rwandan CBC (Competency Based Curriculum).</p>
+        <div class="mt-8 grid gap-5 lg:grid-cols-2">
+          <article class="rounded-2xl bg-[#f8eef2] p-6"><h3 class="text-sm font-bold uppercase tracking-[0.18em] text-[#8A1538]">Mission</h3><p class="mt-3 text-slate-700">BRIDGII brings 3D visualization, simulations and AI-driven content to every classroom in Kigali.</p></article>
+          <article class="rounded-2xl bg-[#f8eef2] p-6"><h3 class="text-sm font-bold uppercase tracking-[0.18em] text-[#8A1538]">Vision</h3><p class="mt-3 text-slate-700">We aim at producing high quality visualistic 3D models and simulations created by ourselves.</p></article>
+        </div>
+        <div class="mt-8 grid gap-4 sm:grid-cols-3">
+          <article class="metric-card"><p class="metric-value">20+</p><p class="metric-label">3D Models</p></article>
+          <article class="metric-card"><p class="metric-value">20+</p><p class="metric-label">Simulations</p></article>
+          <article class="metric-card"><p class="metric-value">800+</p><p class="metric-label">Students Targeted</p></article>
+        </div>
+      </div>
+    </main>
+
+    <footer id="siteFooter"></footer>
+  </div>
+  <script src="assets/js/shared-footer.js"></script>
+  <script src="assets/js/script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="assets/js/auth-config.js"></script>
+  <script src="assets/js/nav-auth.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+

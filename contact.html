@@ -1,0 +1,68 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BRIDGII | Contact</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>tailwind.config={theme:{extend:{colors:{brandSky:'#8A1538',brandDeep:'#0A1F2E',brandMint:'#F3E6EC'},boxShadow:{soft:'0 24px 60px -32px rgba(10, 31, 46, 0.25)'}}}};</script>
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body class="bg-slate-50 text-slate-800">
+  <div class="global-watermark" aria-hidden="true">BRIDGII</div>
+  <div class="floating-bg" aria-hidden="true"><span class="blob blob-a"></span><span class="blob blob-b"></span><span class="blob blob-c"></span><span class="ring ring-a"></span><span class="ring ring-b"></span></div>
+  <div class="relative z-10">
+    <header class="sticky top-0 z-50 border-b border-white/60 bg-white/75 backdrop-blur-xl">
+      <nav class="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 sm:px-6 lg:px-8">
+        <a href="index.html" class="flex items-center gap-3 text-brandDeep"><img src="assets/images/logo.png" alt="BRIDGII logo" class="brand-logo" /></a>
+        <button id="menuBtn" class="inline-flex rounded-lg border border-[#d8a8b8] p-2 text-[#8A1538] lg:hidden" aria-label="Toggle menu" aria-expanded="false"><svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg></button>
+        <ul class="hidden items-center gap-7 text-sm font-semibold text-slate-700 lg:flex">
+          <li><a href="index.html" class="nav-link">Home</a></li><li><a href="about.html" class="nav-link">About Us</a></li><li><a href="services.html" class="nav-link">Services</a></li><li><a href="team.html" class="nav-link">Team</a></li><li><a href="contact.html" class="nav-link active">Contact</a></li>
+        </ul>
+                <div class="hidden items-center gap-3 lg:flex">
+          <a href="login.html" class="rounded-lg border border-[#d8a8b8] px-4 py-2 text-sm font-semibold text-[#8A1538] transition hover:bg-[#f8eef2]">Login</a>
+          <a href="register.html" class="rounded-lg bg-gradient-to-r from-[#8A1538] to-[#B33C63] px-4 py-2 text-sm font-semibold text-white transition hover:-translate-y-0.5">Register</a>
+        </div>      </nav>
+      <div id="mobileMenu" class="hidden border-t border-slate-200 bg-white lg:hidden"><ul class="space-y-1 px-4 py-3 text-sm font-semibold"><li><a href="index.html" class="block rounded-md px-3 py-2 hover:bg-[#f8eef2]">Home</a></li><li><a href="about.html" class="block rounded-md px-3 py-2 hover:bg-[#f8eef2]">About Us</a></li><li><a href="services.html" class="block rounded-md px-3 py-2 hover:bg-[#f8eef2]">Services</a></li><li><a href="team.html" class="block rounded-md px-3 py-2 hover:bg-[#f8eef2]">Team</a></li><li><a href="contact.html" class="block rounded-md px-3 py-2 hover:bg-[#f8eef2]">Contact</a></li></ul></div>
+    </header>
+
+    <main class="section-space mx-auto max-w-7xl px-4 pb-20 sm:px-6 lg:px-8">
+      <div class="reveal rounded-3xl border border-white/80 bg-white/85 p-7 shadow-soft backdrop-blur sm:p-10">
+        <h1 class="text-3xl font-black text-brandDeep sm:text-4xl">Contact</h1>
+        <div class="mt-6 grid gap-4 md:grid-cols-3">
+          <article class="contact-card"><h3>Email</h3><a href="mailto:kamanzifrank2020@gmail.com" class="break-all font-semibold text-brandDeep">kamanzifrank2020@gmail.com</a></article>
+          <article class="contact-card"><h3>Phone</h3><a href="tel:+250798434591" class="font-semibold text-brandDeep">+250798434591</a></article>
+          <article class="contact-card"><h3>Location</h3><p class="font-semibold text-brandDeep">Kigali, Rwanda</p></article>
+        </div>
+        <form id="contactForm" data-email-mode="formsubmit" data-email-endpoint="https://formsubmit.co/ajax/kamanzifrank2020@gmail.com" class="mt-8 grid gap-4 md:grid-cols-2">
+          <input type="hidden" name="_subject" value="New BRIDGII Contact Message" />
+          <input type="hidden" name="_captcha" value="false" />
+          <input type="hidden" name="_template" value="table" />
+          <input type="text" name="name" placeholder="Your name" required class="input-field" />
+          <input type="email" name="email" placeholder="Your email" required class="input-field" />
+          <input type="text" name="subject" placeholder="Subject" class="input-field md:col-span-2" />
+          <textarea name="message" placeholder="Suggestion / feedback box" rows="5" required class="input-field md:col-span-2"></textarea>
+          <button type="submit" class="md:col-span-2 rounded-xl bg-gradient-to-r from-[#8A1538] to-[#B33C63] px-6 py-3 text-sm font-bold text-white transition hover:-translate-y-0.5">Send Message</button>
+        </form>
+        <p id="formStatus" class="mt-3 hidden text-sm font-semibold text-[#8A1538]">Sending message...</p>
+      </div>
+    </main>
+
+    <footer id="siteFooter"></footer>
+  </div>
+  <script src="assets/js/shared-footer.js"></script>
+  <script src="assets/js/script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="assets/js/auth-config.js"></script>
+  <script src="assets/js/nav-auth.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+

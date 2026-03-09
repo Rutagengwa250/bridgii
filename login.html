@@ -1,0 +1,66 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BRIDGII | Login</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>tailwind.config={theme:{extend:{colors:{brandSky:'#8A1538',brandDeep:'#0A1F2E',brandMint:'#F3E6EC'},boxShadow:{soft:'0 24px 60px -32px rgba(10, 31, 46, 0.25)'}}}};</script>
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body class="bg-slate-50 text-slate-800">
+  <div class="global-watermark" aria-hidden="true">BRIDGII</div>
+  <div class="floating-bg" aria-hidden="true"><span class="blob blob-a"></span><span class="blob blob-b"></span><span class="blob blob-c"></span><span class="ring ring-a"></span><span class="ring ring-b"></span></div>
+  <div class="relative z-10">
+    <header class="sticky top-0 z-50 border-b border-white/60 bg-white/75 backdrop-blur-xl">
+      <nav class="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 sm:px-6 lg:px-8">
+        <a href="index.html" class="flex items-center gap-3 text-brandDeep"><img src="assets/images/logo.png" alt="BRIDGII logo" class="brand-logo" /></a>
+        <button id="menuBtn" class="inline-flex rounded-lg border border-[#d8a8b8] p-2 text-[#8A1538] lg:hidden" aria-label="Toggle menu" aria-expanded="false"><svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg></button>
+        <ul class="hidden items-center gap-7 text-sm font-semibold text-slate-700 lg:flex"><li><a href="index.html" class="nav-link">Home</a></li><li><a href="about.html" class="nav-link">About Us</a></li><li><a href="services.html" class="nav-link">Services</a></li><li><a href="team.html" class="nav-link">Team</a></li><li><a href="contact.html" class="nav-link">Contact</a></li></ul>
+        <div class="hidden items-center gap-3 lg:flex"><a href="login.html" class="rounded-lg border border-[#d8a8b8] px-4 py-2 text-sm font-semibold text-[#8A1538] transition hover:bg-[#f8eef2]">Login</a><a href="register.html" class="rounded-lg bg-gradient-to-r from-[#8A1538] to-[#B33C63] px-4 py-2 text-sm font-semibold text-white transition hover:-translate-y-0.5">Register</a></div>
+      </nav>
+      <div id="mobileMenu" class="hidden border-t border-slate-200 bg-white lg:hidden"><ul class="space-y-1 px-4 py-3 text-sm font-semibold"><li><a href="index.html" class="block rounded-md px-3 py-2 hover:bg-[#f8eef2]">Home</a></li><li><a href="about.html" class="block rounded-md px-3 py-2 hover:bg-[#f8eef2]">About Us</a></li><li><a href="services.html" class="block rounded-md px-3 py-2 hover:bg-[#f8eef2]">Services</a></li><li><a href="team.html" class="block rounded-md px-3 py-2 hover:bg-[#f8eef2]">Team</a></li><li><a href="contact.html" class="block rounded-md px-3 py-2 hover:bg-[#f8eef2]">Contact</a></li><li><a href="login.html" class="block rounded-md px-3 py-2 hover:bg-[#f8eef2]">Login</a></li><li><a href="register.html" class="block rounded-md px-3 py-2 hover:bg-[#f8eef2]">Register</a></li></ul></div>
+    </header>
+
+    <main class="section-space mx-auto max-w-2xl px-4 pb-20 sm:px-6 lg:px-8">
+      <div class="reveal rounded-3xl border border-white/80 bg-white/85 p-7 shadow-soft backdrop-blur sm:p-10">
+        <h1 class="text-3xl font-black text-brandDeep sm:text-4xl">Login</h1>
+
+        <form id="loginForm" class="mt-6 grid gap-4">
+          <input type="email" name="email" placeholder="Email" class="input-field" required />
+          <input type="password" name="password" placeholder="Password" class="input-field" required />
+          <button type="submit" class="rounded-xl bg-gradient-to-r from-[#8A1538] to-[#B33C63] px-6 py-3 text-sm font-bold text-white transition hover:-translate-y-0.5">Sign In</button>
+        </form>
+
+        <div class="my-4 flex items-center gap-3 text-xs text-slate-500"><span class="h-px flex-1 bg-slate-200"></span><span>OR</span><span class="h-px flex-1 bg-slate-200"></span></div>
+
+        <button id="googleLoginBtn" type="button" class="flex w-full items-center justify-center gap-2 rounded-xl border border-slate-300 bg-white px-6 py-3 text-sm font-bold text-slate-700 transition hover:bg-slate-50">
+          <svg aria-hidden="true" class="h-5 w-5" viewBox="0 0 24 24">
+            <path fill="#EA4335" d="M12 10.2v3.9h5.4c-.24 1.26-.96 2.33-2.04 3.05l3.3 2.56c1.92-1.77 3.03-4.38 3.03-7.5 0-.72-.06-1.41-.2-2.08H12z"/>
+            <path fill="#34A853" d="M12 22c2.7 0 4.97-.9 6.63-2.43l-3.3-2.56c-.9.6-2.04.96-3.33.96-2.58 0-4.77-1.74-5.55-4.08l-3.42 2.64A9.99 9.99 0 0 0 12 22z"/>
+            <path fill="#4A90E2" d="M6.45 13.9a6.03 6.03 0 0 1 0-3.8l-3.42-2.64a10.08 10.08 0 0 0 0 9.08l3.42-2.64z"/>
+            <path fill="#FBBC05" d="M12 6.03c1.47 0 2.8.51 3.84 1.53l2.88-2.88C16.96 2.93 14.7 2 12 2a9.99 9.99 0 0 0-8.97 5.46l3.42 2.64C7.23 7.77 9.42 6.03 12 6.03z"/>
+          </svg>
+          <span>Continue with Google</span>
+        </button>
+
+        <p id="authStatus" class="mt-4 hidden text-sm font-semibold"></p>
+      </div>
+    </main>
+
+    <footer id="siteFooter"></footer>
+  </div>
+
+  <script src="assets/js/shared-footer.js"></script>
+  <script src="assets/js/script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="assets/js/auth-config.js"></script>
+  <script src="assets/js/nav-auth.js"></script>
+  <script src="assets/js/auth.js"></script>
+</body>
+</html>
+
+
+
+
+
