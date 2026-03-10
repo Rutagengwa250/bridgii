@@ -443,7 +443,7 @@ function initAIAssistantWidget() {
       </div>
       <iframe
         class="ai-widget-frame"
-        src="https://app.chatgptbuilder.io/webchat/?p=1616923"
+        src="https://app.chatgptbuilder.io/webchat/?p=1198047"
         title="AI Assistant"
         loading="lazy"
       ></iframe>
@@ -481,4 +481,5 @@ function initAIAssistantWidget() {
 }
 
 initAIAssistantWidget();
+
 
