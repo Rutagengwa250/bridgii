@@ -1,0 +1,55 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BRIDGII | Services</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>tailwind.config={theme:{extend:{colors:{brandSky:'#8A1538',brandDeep:'#0A1F2E',brandMint:'#F3E6EC'},boxShadow:{soft:'0 24px 60px -32px rgba(10, 31, 46, 0.25)'}}}};</script>
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+</head>
+<body class="bg-slate-50 text-slate-800">
+  <div class="global-watermark" aria-hidden="true">BRIDGII</div>
+  <div class="floating-bg" aria-hidden="true"><span class="blob blob-a"></span><span class="blob blob-b"></span><span class="blob blob-c"></span><span class="ring ring-a"></span><span class="ring ring-b"></span></div>
+  <div class="relative z-10">
+    <header class="sticky top-0 z-50 border-b border-white/60 bg-white/75 backdrop-blur-xl">
+      <nav class="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 sm:px-6 lg:px-8">
+        <a href="index.html" class="flex items-center gap-3 text-brandDeep"><img src="assets/images/logo.png" alt="BRIDGII logo" class="brand-logo" /></a>
+        <button id="menuBtn" class="inline-flex rounded-lg border border-[#d8a8b8] p-2 text-[#8A1538] lg:hidden" aria-label="Toggle menu" aria-expanded="false"><svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg></button>
+        <ul class="hidden items-center gap-7 text-sm font-semibold text-slate-700 lg:flex">
+          <li><a href="index.html" class="nav-link">Home</a></li><li><a href="about.html" class="nav-link">About Us</a></li><li><a href="services.html" class="nav-link active">Services</a></li><li><a href="team.html" class="nav-link">Team</a></li><li><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+                <div class="hidden items-center gap-3 lg:flex">
+          <a href="login.html" class="rounded-lg border border-[#d8a8b8] px-4 py-2 text-sm font-semibold text-[#8A1538] transition hover:bg-[#f8eef2]">Login</a>
+          <a href="register.html" class="rounded-lg bg-gradient-to-r from-[#8A1538] to-[#B33C63] px-4 py-2 text-sm font-semibold text-white transition hover:-translate-y-0.5">Register</a>
+        </div>      </nav>
+      <div id="mobileMenu" class="hidden border-t border-slate-200 bg-white lg:hidden"><ul class="space-y-1 px-4 py-3 text-sm font-semibold"><li><a href="index.html" class="block rounded-md px-3 py-2 hover:bg-[#f8eef2]">Home</a></li><li><a href="about.html" class="block rounded-md px-3 py-2 hover:bg-[#f8eef2]">About Us</a></li><li><a href="services.html" class="block rounded-md px-3 py-2 hover:bg-[#f8eef2]">Services</a></li><li><a href="team.html" class="block rounded-md px-3 py-2 hover:bg-[#f8eef2]">Team</a></li><li><a href="contact.html" class="block rounded-md px-3 py-2 hover:bg-[#f8eef2]">Contact</a></li></ul></div>
+    </header>
+
+    <main class="section-space mx-auto max-w-7xl px-4 pb-20 sm:px-6 lg:px-8">
+      <div class="reveal mb-8 text-center" data-aos="fade-up"><h1 class="text-3xl font-black text-brandDeep sm:text-4xl">Services</h1><p class="mt-3 text-slate-600">Interactive offerings for visual-first learning.</p></div>
+      <div class="grid gap-6 sm:grid-cols-2 xl:grid-cols-4">
+        <article class="service-card reveal" data-aos="fade-up"><div class="learning-thumb"><img src="assets/images/covers/learning-videos.jpg" alt="Learning videos cover"></div><h3 class="service-title mt-4">Learning Videos</h3><ul class="service-list"><li>Biology</li><li>Chemistry</li><li>Physics</li><li>Geography</li><li>Economics</li></ul><a href="videos.html" class="open-btn mt-4 inline-flex">Open Page</a></article>
+        <article class="service-card reveal" data-aos="zoom-in"><div class="learning-thumb"><img src="assets/images/covers/models-sim.svg" alt="3D models cover"></div><h3 class="service-title mt-4">3D Models</h3><ul class="service-list"><li>Biology</li><li>Chemistry</li><li>Interactive Visual Structures</li></ul><a href="models.html" class="open-btn mt-4 inline-flex">Open Page</a></article>
+        <article class="service-card reveal" data-aos="slide-up"><div class="learning-thumb"><img src="assets/images/covers/biology-lab.jpg" alt="Virtual lab cover"></div><h3 class="service-title mt-4">Virtual Labs</h3><p class="mt-2 text-sm text-slate-600">Interactive simulations for Biology, Chemistry and Physics.</p><a href="labs.html" class="open-btn mt-4 inline-flex">Open Page</a></article>
+        <article class="service-card reveal" data-aos="fade-up"><div class="learning-thumb"><img src="assets/images/covers/reading-books.svg" alt="Books cover"></div><h3 class="service-title mt-4">Books</h3><ul class="service-list"><li>Reading Books</li><li>Other Books</li></ul><a href="books.html" class="open-btn mt-4 inline-flex">Open Page</a></article>
+      </div>
+    </main>
+
+    <footer class="border-t border-white/60 bg-white/80 py-6 text-center text-sm text-slate-600"><p>&copy; <span id="year"></span> BRIDGII. All rights reserved.</p></footer>
+  </div>
+  <script src="assets/js/script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="assets/js/auth-config.js"></script>
+  <script src="assets/js/nav-auth.js"></script>
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>AOS.init({duration:700, once:true, offset:80});</script>
+</body>
+</html>
+
+
+
+
+
+
