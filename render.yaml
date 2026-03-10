@@ -1,0 +1,8 @@
+services:
+  - type: web
+    name: bridgii-site
+    env: node
+    plan: free
+    buildCommand: yarn
+    startCommand: yarn start
+    autoDeploy: true
