@@ -190,13 +190,13 @@ function initNavSearch() {
   if (menuButton && !mobileSearchContainer) {
     mobileSearchContainer = document.createElement('div');
     mobileSearchContainer.setAttribute('data-mobile-search-inline', 'true');
-    mobileSearchContainer.className = 'relative mx-2 flex-1 lg:hidden';
+    mobileSearchContainer.className = 'relative mx-2 flex-1 min-w-0 max-w-[190px] sm:max-w-[280px] lg:hidden';
     mobileSearchContainer.innerHTML = `
       <input
         id="mobileSearchInput"
         type="search"
         placeholder="Search..."
-        class="w-full rounded-lg border border-[#d8a8b8] bg-[#f8eef2]/70 px-3 py-2 text-sm text-slate-700 placeholder:text-slate-500 focus:outline-none focus:ring-2 focus:ring-[#c97a96]"
+        class="w-full rounded-lg border border-[#d8a8b8] bg-[#f8eef2]/70 px-2.5 py-1.5 text-xs text-slate-700 placeholder:text-slate-500 focus:outline-none focus:ring-2 focus:ring-[#c97a96] sm:px-3 sm:py-2 sm:text-sm"
         autocomplete="off"
       />
       <div id="mobileSearchResults" class="absolute left-0 top-[calc(100%+0.35rem)] z-50 hidden w-full rounded-lg border border-[#e7c9d4] bg-[#f8eef2]/95 p-2 shadow-lg"></div>
